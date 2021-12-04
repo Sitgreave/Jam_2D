@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
 		}
 		
 
-		if (Input.GetMouseButton(1))
+		if (Input.GetMouseButton(1) && towExist)
 		{
 			tow.ResetRope();
 			towExist = false;
@@ -41,7 +41,6 @@ public class Weapon : MonoBehaviour
 		newBullet = Instantiate(bulletPrefab, gunPoint.position, Quaternion.identity, gunTrashBucket);
 		newBullet.Rigidbody.AddForce(gunPoint.right * speed, ForceMode2D.Impulse);
 		newBullet.transform.right = gunPoint.right;
-		towExist = true;
 
 	}
 
