@@ -21,7 +21,8 @@ public class Bullet : MonoBehaviour
         if((collisionWith.value & 1 <<collision.gameObject.layer) == 1 << collision.gameObject.layer)
         {
             CanTowed = true;
-            TowPosition = collision.gameObject.transform.position;
+            TowPosition = Rigidbody.position;
+            Rigidbody.Sleep();
         }
     }
 }

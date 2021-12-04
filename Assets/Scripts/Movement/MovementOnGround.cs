@@ -17,7 +17,8 @@ public class MovementOnGround : MonoBehaviour
         if (Input.GetButton("Jump") && _groundChecker.IsGround)
         {
             _rb.AddForce(new Vector2(0, _jumpForce));
-            Invoke(nameof(FastGrounded), 1f);
+            _groundChecker.IsGround = false;
+            //Invoke(nameof(FastGrounded), 1f);
         }
     }
 

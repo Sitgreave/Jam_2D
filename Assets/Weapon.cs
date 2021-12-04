@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour
 		{
 			tow.ResetRope();
 			towExist = false;
-			if (newBullet != null) Destroy(newBullet.gameObject);
+			if (newBullet != null)Destroy(newBullet.gameObject);
 			
 		}
 		if (newBullet != null) TryTow();
@@ -49,6 +49,7 @@ public class Weapon : MonoBehaviour
 	{
 		if (newBullet.CanTowed)
 		{
+			
 			tow.Towing(newBullet.TowPosition);
 			towExist = true;
 	

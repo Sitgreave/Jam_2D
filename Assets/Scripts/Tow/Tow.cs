@@ -31,8 +31,8 @@ public class Tow : MonoBehaviour
         ropeHingeAnchorRb.position = towPosition;
         ropeJoint.distance = Vector2.Distance(transform.position, towPosition);
         ropeJoint.enabled = true;
-        ropeRenderer.SetPosition(0, transform.position);
-        ropeRenderer.SetPosition(1, towPosition);
+        ropeRenderer.SetPosition(0, towPosition);
+        ropeRenderer.SetPosition(1, transform.position);
         _moveEvents._onRopeHolded.Invoke();
     } 
     public void ResetRope()
